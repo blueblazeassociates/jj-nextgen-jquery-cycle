@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=PSCMP
 Tags: image, picture, photo, widgets, gallery, images, nextgen-gallery, jquery, slideshow, cycle lite, javascript
 Requires at least: 2.8
 Tested up to: 3.0.4
-Stable tag: 1.0.7
+Stable tag: 1.0.8
 
 Allows you to pick a gallery from the 'NextGen Gallery' plugin to use with 'JQuery Cycle Lite'.
 
@@ -37,6 +37,7 @@ NOTE: sc means shortcode:
 - Title: Title. Leave blank for no title. (sc: title="My Cycle Lite")
 - Gallery: Leave blank to use all galleries or choose a gallery to use. (sc: gallery="galleryid")
 - Order: Order to display results in. You can choose; Random, Latest First, Oldest First, or NextGen Sortorder. Random will still work when a page is cached. (sc: order="random"|"asc"|"desc"|"sortorder")
+- Shuffle: If order is random and this is true will shuffle images with javascript. Useful if your are caching your pages. (sc: shuffle="true"|"false")
 - Max pictures: The maximum amount of pictures to use. (sc: max_pictures="6")
 - HTML id: HTML id to use. Defaults to 'cycle_lite'. Needs to be different for multiple instances on same page. (sc: html_id="cycle_lite")
 - Image width: Width of image. Defaults to 200. Recommended to set this. (sc: width="200")
@@ -49,7 +50,6 @@ Please check the cycle lite home page form more information (http://jquery.malsu
 
 - timeout: milliseconds between slide transitions (0 to disable auto advance).. (sc: timeout="4000")
 - speed: speed of the transition (any valid fx speed value). (sc: speed="1000")
-- height: container height. (sc: height="auto")
 - sync: true if in/out transitions should occur simultaneously. (sc: sync="1")
 - fit: force slides to fit container. (sc: fit="0")
 - pause: true to enable "pause on hover". (sc: pause="1")
@@ -81,6 +81,7 @@ Email: wpjjcoder@gmail.com
 
 == Changelog ==
 
+- 1.0.8: Width set on cycle lite container now. No more stylesheet everything inline for lightness. New shuffle field. If order is random and this is true will shuffle images with javascript. Useful if your are caching your pages. This use to be always on in previous verions but some people want images to load in order so if not caching the page no need to be turned on.
 - 1.0.7: Fix.
 - 1.0.6: Optimisation.
 - 1.0.5: NextGen images that are excluded now don't show up.

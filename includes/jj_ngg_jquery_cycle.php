@@ -18,6 +18,7 @@ class JJ_NGG_JQuery_Cycle extends WP_Widget
     $title = apply_filters('widget_title', $instance['title']);
     $html_id = $this->get_val($instance, 'html_id', 'cycle_lite');
     $order = $this->get_val($instance, 'order', 'asc', false);
+    $shuffle = $this->get_val($instance, 'shuffle');
     $limit = $this->get_val_numeric($instance, 'max_pictures');
     $gallery = $this->get_val_numeric($instance, 'gallery');
     $width = $this->get_val_numeric($instance, 'width');
@@ -98,8 +99,12 @@ class JJ_NGG_JQuery_Cycle extends WP_Widget
       if($center == '1' && $width != '')
       {
         $center_style_outer = "text-align:center;";
-        $center_style_inner = "text-align:left;width:" . $width . "px;margin-right:auto;margin-left:auto;";
+        $center_style_inner = "text-align:left;margin-right:auto;margin-left:auto;";
       }               
+      if($width != '')
+      {
+        $center_style_inner .= "width:" . $width . "px;";
+      } 
       if($height != '')
       {
         $center_style_outer .= "height:" . $height . "px;";
@@ -186,7 +191,7 @@ class JJ_NGG_JQuery_Cycle extends WP_Widget
     // Add javascript
     $output .= "\n<script type=\"text/javascript\">";
     // Shuffle results on random order so even if page is cached the order will be different each time
-    if($order == 'random')
+    if($order == 'random' && $shuffle == 'true')
     {
       $output .= "\n  jQuery('div#" . $html_id . "').jj_ngg_shuffle();";
     }
@@ -200,7 +205,7 @@ class JJ_NGG_JQuery_Cycle extends WP_Widget
  
     if($shortcode != '1')
     {      
-      echo $before_widget . "\n<ul class=\"ul_jj_cycle\">\n    <li class=\"li_jj_cycle\">" . $output . "\n    </li>\n  </ul>\n" . $after_widget;
+      echo $before_widget . "\n<ul class=\"ul_jj_cycle\" style=\"list-style-type:none;margin:0;padding:0;\">\n    <li class=\"li_jj_cycle\" style=\"margin:0;padding:0;\">" . $output . "\n    </li>\n  </ul>\n" . $after_widget;
     }
     else
     {
@@ -244,6 +249,7 @@ class JJ_NGG_JQuery_Cycle extends WP_Widget
       'gallery' => '',
       'html_id' => 'cycle_lite',
       'order' => 'random',
+      'shuffle' => 'false',
       'max_pictures' => '',
       'width' => '200',
       'height' => '200',
@@ -307,6 +313,11 @@ class JJ_NGG_JQuery_Cycle extends WP_Widget
       } ?>
     </select>
   </p>
+  <p>
+    <label><strong>Shuffle:</strong> <small>(Only for random order)</small></label><br />
+    <input type="radio" id="<?php echo $this->get_field_id('shuffle'); ?>_true" name="<?php echo $this->get_field_name('shuffle'); ?>" value="true" style="vertical-align: middle;"<?php if($instance['shuffle'] == 'true') { echo " checked=\"checked\""; } ?> /><label for="<?php echo $this->get_field_id('shuffle'); ?>_true" style="vertical-align: middle;">true</label>
+    <input type="radio" id="<?php echo $this->get_field_id('shuffle'); ?>_false" name="<?php echo $this->get_field_name('shuffle'); ?>" value="false" style="vertical-align: middle;"<?php if($instance['shuffle'] == 'false') { echo " checked=\"checked\""; } ?> /><label for="<?php echo $this->get_field_id('shuffle'); ?>_false" style="vertical-align: middle;">false</label>          
+  </p>   
   <p>
     <label for="<?php echo $this->get_field_id('max_pictures'); ?>"><strong>Max pictures:</strong> (Leave blank for all)</label><br />
     <input type="text" id="<?php echo $this->get_field_id('max_pictures'); ?>" name="<?php echo $this->get_field_name('max_pictures'); ?>" value="<?php echo $instance['max_pictures']; ?>" size="3" />

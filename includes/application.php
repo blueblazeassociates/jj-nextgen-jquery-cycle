@@ -9,7 +9,6 @@ add_shortcode( 'jj-ngg-jquery-cycle', 'jj_ngg_jquery_cycle_shortcode_handler' );
 if( !is_admin() )
 {
   add_action( 'init', 'WPJJNGGJ_CYCLE_enqueue_scripts' );
-  add_action( 'init', 'WPJJNGGJ_CYCLE_enqueue_styles' );  
 }
 
 ?>
