@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=PSCMP
 Tags: image, picture, photo, widgets, gallery, images, nextgen-gallery, jquery, slideshow, cycle lite, javascript
 Requires at least: 2.8
 Tested up to: 3.0.4
-Stable tag: 1.0.8
+Stable tag: 1.0.9
 
 Allows you to pick a gallery from the 'NextGen Gallery' plugin to use with 'JQuery Cycle Lite'.
 
@@ -81,7 +81,8 @@ Email: wpjjcoder@gmail.com
 
 == Changelog ==
 
-- 1.0.8: Width set on cycle lite container now. No more stylesheet everything inline for lightness. New shuffle field. If order is random and this is true will shuffle images with javascript. Useful if your are caching your pages. This use to be always on in previous verions but some people want images to load in order so if not caching the page no need to be turned on.
+- 1.0.9: Overflow hidden on divs if height is entered.
+- 1.0.8: Width set on cycle lite container now. No more stylesheet everything inline for lightness. New shuffle field. If order is random and this is true will shuffle images with javascript. Useful if you are caching your pages. This use to be always on in previous verions but some people want images to load in order so if not caching the page no need to be turned on.
 - 1.0.7: Fix.
 - 1.0.6: Optimisation.
 - 1.0.5: NextGen images that are excluded now don't show up.

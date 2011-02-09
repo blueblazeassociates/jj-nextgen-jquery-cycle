@@ -94,32 +94,32 @@ class JJ_NGG_JQuery_Cycle extends WP_Widget
         }
       }
                       
-      $center_style_outer = '';
-      $center_style_inner = '';
+      $style_outer = '';
+      $style_inner = '';
       if($center == '1' && $width != '')
       {
-        $center_style_outer = "text-align:center;";
-        $center_style_inner = "text-align:left;margin-right:auto;margin-left:auto;";
+        $style_outer = "text-align:center;";
+        $style_inner = "text-align:left;margin-right:auto;margin-left:auto;";
       }               
       if($width != '')
       {
-        $center_style_inner .= "width:" . $width . "px;";
+        $style_inner .= "width:" . $width . "px;";
       } 
       if($height != '')
       {
-        $center_style_outer .= "height:" . $height . "px;";
-        $center_style_inner .= "height:" . $height . "px;";        
+        $style_outer .= "height:" . $height . "px;overflow:hidden;";
+        $style_inner .= "height:" . $height . "px;overflow:hidden;";        
       }
-      if($center_style_outer != '')
+      if($style_outer != '')
       {
-        $center_style_outer = " style=\"" . $center_style_outer . "\"";
+        $style_outer = " style=\"" . $style_outer . "\"";
       }
-      if($center_style_inner != '')
+      if($style_inner != '')
       {
-        $center_style_inner = " style=\"" . $center_style_inner . "\"";
+        $style_inner = " style=\"" . $style_inner . "\"";
       }      
-      $output .= "\n<div id=\"" . $html_id . "_container\" class=\"cycle_lite_container\"" . $center_style_outer . ">";      
-      $output .= "\n  <div id=\"" . $html_id . "\"" . $center_style_inner . ">";
+      $output .= "\n<div id=\"" . $html_id . "_container\" class=\"cycle_lite_container\"" . $style_outer . ">";      
+      $output .= "\n  <div id=\"" . $html_id . "\"" . $style_inner . ">";
       $image_alt = null;
       $image_description = null;
       foreach($results as $result) 
