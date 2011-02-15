@@ -83,6 +83,7 @@ Email: wpjjcoder@gmail.com
 
 == Changelog ==
 
+- 1.1.0: Readme.
 - 1.0.9: Overflow hidden on divs if height is entered.
 - 1.0.8: Width set on cycle lite container now. No more stylesheet everything inline for lightness. New shuffle field. If order is random and this is true will shuffle images with javascript. Useful if you are caching your pages. This use to be always on in previous verions but some people want images to load in order so if not caching the page no need to be turned on.
 - 1.0.7: Fix.
