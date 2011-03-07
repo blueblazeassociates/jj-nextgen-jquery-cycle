@@ -3,7 +3,7 @@
 Plugin Name: JJ NextGen JQuery Cycle
 Description: Allows you to pick a gallery from the 'NextGen Gallery' plugin to use with 'JQuery Cycle Lite'.
 Author: JJ Coder
-Version: 1.1.0
+Version: 1.1.1
 */
 
 if ( ! defined( 'WPJJNGGJ_CYCLE_PLUGIN_BASENAME' ) )
@@ -21,7 +21,7 @@ function WPJJNGGJ_CYCLE_set_plugin_meta($links, $file)
   if ($file == $plugin) 
   {
     $links[] = '<a href="http://wordpress.org/extend/plugins/jj-nextgen-jquery-cycle/">' . 'Visit plugin site' . '</a>';    
-    $links[] = '<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=PSCMPVDADYP74&lc=NZ&item_name=JJNextGenJQueryCycle&item_number=jjcoder_cycle&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted">' . 'Donate' . '</a>';
+    $links[] = '<a href="http://www.redcross.org.nz/donate">' . 'Donate to Christchurch Quake' . '</a>';
   }
   return $links;
 }

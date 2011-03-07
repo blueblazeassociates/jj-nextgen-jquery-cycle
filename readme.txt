@@ -1,10 +1,10 @@
 === JJ NextGen JQuery Cycle ===
 Contributors: JJ Coder
-Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=PSCMPVDADYP74&lc=NZ&item_name=JJNextGenJQueryCycle&item_number=jjcoder_cycle&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted
+Donate link: http://www.redcross.org.nz/donate
 Tags: image, picture, photo, widgets, gallery, images, nextgen-gallery, jquery, slideshow, cycle lite, javascript
 Requires at least: 2.8
-Tested up to: 3.0.5
-Stable tag: 1.1.0
+Tested up to: 3.1
+Stable tag: 1.1.1
 
 Allows you to pick a gallery from the 'NextGen Gallery' plugin to use with 'JQuery Cycle Lite'.
 
@@ -73,9 +73,21 @@ Please refer to the description for requirements and how to use this plugin.
 
 == Frequently Asked Questions ==
 
-None yet.
+Question:
 
-Email: wpjjcoder@gmail.com
+- How can I use plugin inside normal PHP code?
+
+Answer:
+
+- echo do_shortcode('[jj-ngg-jquery-cycle html_id="about-cycle-lite" gallery="1" width="200" height="150"]');
+
+Question:
+
+- Doesn't work after upgrade? or Doesn't work with this theme? ... going to give you bad rating if blah blah... etc
+  
+Answer:
+
+- Please check that you don't have two versions of jQuery loading, this is the problem most of the time. Also I don't care if people give me a bad rating... even if its due to some technical fault outside of the scope of the plugin. I made these plugins because I required the functionality and I thought other people might find them useful.
 
 == Screenshots ==
 
@@ -83,6 +95,7 @@ Email: wpjjcoder@gmail.com
 
 == Changelog ==
 
+- 1.1.1: Donate to Christchurch Quake.
 - 1.1.0: Readme.
 - 1.0.9: Overflow hidden on divs if height is entered.
 - 1.0.8: Width set on cycle lite container now. No more stylesheet everything inline for lightness. New shuffle field. If order is random and this is true will shuffle images with javascript. Useful if you are caching your pages. This use to be always on in previous verions but some people want images to load in order so if not caching the page no need to be turned on.
@@ -96,5 +109,3 @@ Email: wpjjcoder@gmail.com
 - 1.0.0: First version.
 
 == Contributors ==
-
-JJ Coder wpjjcoder@gmail.com
