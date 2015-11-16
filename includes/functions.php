@@ -25,7 +25,7 @@ function jj_ngg_jquery_cycle_shortcode_handler($atts)
   $instance = array();
   foreach($atts as $att => $val)
   {
-    $instance[wp_specialchars($att)] = wp_specialchars($val);
+    $instance[esc_html($att)] = esc_html($val);
   }
 
   // Set defaults
