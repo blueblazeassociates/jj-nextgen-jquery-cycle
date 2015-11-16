@@ -1,0 +1,37 @@
+{
+  "name" : "blueblazeassociates/jj-nextgen-jquery-cycle",
+  "description" : "Allows you to pick a gallery from the 'NextGen Gallery' plugin to use with 'JQuery Cycle Lite'.",
+  "type" : "wordpress-plugin",
+  "homepage" : "https://wordpress.org/plugins/jj-nextgen-jquery-cycle/",
+  "license" : "GPL-2.0+",
+  "authors" : [{
+    "name" : "JJ Coder",
+    "homepage" : "https://wordpress.org/plugins/jj-nextgen-jquery-cycle/",
+    "role" : "Author/Creator"
+  }, {
+    "name" : "Ed Gifford",
+    "homepage" : "http://www.blueblazeassociates.com",
+    "role" : "Composer-fier",
+    "email" : "egifford@blueblazeassociates.com"
+    }
+  ],
+  "keywords" : [
+    "cycle lite",
+    "gallery",
+    "image",
+    "images",
+    "javascript",
+    "jquery",
+    "nextgen gallery",
+    "photo",
+    "picture",
+    "slideshow",
+    "widgets"
+  ],
+  "require" : {
+    "wpackagist-plugin/nextgen-gallery" : ">=2.1.15"
+  },
+  "replace": {
+    "wpackagist-plugin/jj-nextgen-jquery-cycle" : "*"
+  }
+}
